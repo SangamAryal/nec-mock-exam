@@ -1,0 +1,1622 @@
+{
+ "1.1": {
+  "sub": "1.1",
+  "title": "Basic Concepts (Ohm's law, circuits, KCL/KVL, star-delta)",
+  "qa": [
+   {
+    "q": "What is the SI unit of resistivity?",
+    "a": "Ω·m (ohm-metre). From R = ρL/A, ρ = RA/L."
+   },
+   {
+    "q": "If a wire is stretched to twice its length at constant volume, its resistance becomes",
+    "a": "4 times. Length doubles and area halves, so R = ρ(2L)/(A/2) = 4R."
+   },
+   {
+    "q": "Three 6 Ω resistors in series give",
+    "a": "18 Ω. Series: Req = R₁ + R₂ + R₃."
+   },
+   {
+    "q": "Ohm's law is not applicable to",
+    "a": "non-linear devices such as diodes, transistors and arc lamps."
+   },
+   {
+    "q": "A 60 W and a 100 W bulb (both rated 220 V) are connected in series across 220 V. Which glows brighter?",
+    "a": "The 60 W bulb. It has higher resistance (R = V²/P), and the same current flows, so P = I²R is larger."
+   }
+  ],
+  "keyPoints": "Two resistors in parallel: Req = R₁R₂/(R₁ + R₂). Current divider: I₁ = I × R₂/(R₁ + R₂)."
+ },
+ "1.2": {
+  "sub": "1.2",
+  "title": "Network Theorems, RLC Circuits and Power",
+  "qa": [
+   {
+    "q": "Thevenin resistance is found by",
+    "a": "killing all independent sources (V short, I open) and finding the resistance seen from the load terminals."
+   },
+   {
+    "q": "The bandwidth of a series RLC circuit is",
+    "a": "BW = R/(2πL) Hz, with Q = f₀/BW."
+   },
+   {
+    "q": "Power factor of a purely resistive circuit is",
+    "a": "1 (unity), since φ = 0°."
+   },
+   {
+    "q": "Impedance of a series RL circuit with R = 3 Ω and XL = 4 Ω is",
+    "a": "5 Ω. Z = √(3² + 4²) = 5."
+   },
+   {
+    "q": "Reciprocity theorem applies to",
+    "a": "linear bilateral networks with a single source."
+   }
+  ],
+  "keyPoints": "Power triangle: S² = P² + Q². P = VI cos φ (W), Q = VI sin φ (VAR), S = VI (VA)."
+ },
+ "1.3": {
+  "sub": "1.3",
+  "title": "Alternating Current Fundamentals and Three-Phase Systems",
+  "qa": [
+   {
+    "q": "The instantaneous value of v = Vm sin(ωt) at ωt = 30° is",
+    "a": "0.5 Vm, since sin 30° = 0.5."
+   },
+   {
+    "q": "The RMS value of a half-wave rectified sine of peak Vm is",
+    "a": "Vm/2. Its average value is Vm/π."
+   },
+   {
+    "q": "The RMS value of a full-wave rectified sine is",
+    "a": "Vm/√2, the same as a full sine wave. Its average is 2Vm/π."
+   },
+   {
+    "q": "The number of wires in a three-phase four-wire system is",
+    "a": "4 (three lines and one neutral)."
+   },
+   {
+    "q": "The speed of an alternator with P poles producing f Hz is",
+    "a": "Ns = 120f/P rpm. A 4-pole, 50 Hz machine runs at 1500 rpm."
+   }
+  ],
+  "keyPoints": "Two-wattmeter method: total power P = W₁ + W₂. tan φ = √3(W₁ − W₂)/(W₁ + W₂)."
+ },
+ "1.4": {
+  "sub": "1.4",
+  "title": "Semiconductor Devices (Diode, BJT, MOSFET, CMOS)",
+  "qa": [
+   {
+    "q": "Diode current equation",
+    "a": "I = Is(e^(V/ηVT) − 1), with VT ≈ 26 mV at room temperature."
+   },
+   {
+    "q": "The ripple factor of a full-wave rectifier (without filter) is",
+    "a": "about 0.482. For a half-wave rectifier it is 1.21."
+   },
+   {
+    "q": "Efficiency of a full-wave rectifier (max) is",
+    "a": "81.2%. Half-wave: 40.6%."
+   },
+   {
+    "q": "The PIV of a centre-tap full-wave rectifier diode is",
+    "a": "2Vm. For a bridge rectifier it is Vm."
+   },
+   {
+    "q": "In a BJT, the most heavily doped region is the",
+    "a": "emitter. The base is thin and lightly doped; the collector is the largest."
+   }
+  ],
+  "keyPoints": "In a MOSFET in saturation: ID = k(VGS − VT)². The threshold voltage VT separates cut-off from conduction."
+ },
+ "1.5": {
+  "sub": "1.5",
+  "title": "Signal Generators and Oscillators",
+  "qa": [
+   {
+    "q": "An oscillator uses",
+    "a": "positive feedback. Amplifiers use negative feedback for stability."
+   },
+   {
+    "q": "The frequency of a 555 astable is",
+    "a": "f = 1.44/((RA + 2RB)C). Duty cycle = (RA + RB)/(RA + 2RB)."
+   },
+   {
+    "q": "Pulse width of a 555 monostable is",
+    "a": "T = 1.1RC."
+   },
+   {
+    "q": "Series and parallel resonance frequencies of a crystal are",
+    "a": "very close; fs is slightly lower than fp."
+   },
+   {
+    "q": "A Schmitt trigger is used to",
+    "a": "convert slowly varying or noisy signals into clean square waves (it has hysteresis)."
+   }
+  ],
+  "keyPoints": "Oscillator types: RC (phase-shift, Wien bridge) for audio; LC (Colpitts, Hartley, Clapp) for RF; crystal for high stability."
+ },
+ "1.6": {
+  "sub": "1.6",
+  "title": "Amplifiers and Op-amps",
+  "qa": [
+   {
+    "q": "The gain-bandwidth product of an op-amp is",
+    "a": "constant: closed-loop gain × bandwidth = unity-gain bandwidth (≈1 MHz for 741)."
+   },
+   {
+    "q": "Output of an ideal op-amp integrator is",
+    "a": "Vo = −(1/RC)∫Vin dt."
+   },
+   {
+    "q": "Output of an ideal op-amp differentiator is",
+    "a": "Vo = −RC dVin/dt."
+   },
+   {
+    "q": "A summing amplifier with equal resistors gives",
+    "a": "Vo = −(V₁ + V₂ + V₃)."
+   },
+   {
+    "q": "The op-amp comparator operates in",
+    "a": "open loop; the output saturates at ±Vsat depending on which input is larger."
+   }
+  ],
+  "keyPoints": "Efficiency ranking: Class A (25–50%) < Class AB < Class B (78.5%) < Class C (up to ~90%). Distortion ranking is the reverse."
+ },
+ "2.1": {
+  "sub": "2.1",
+  "title": "Digital Logic (Number Systems, Gates, Boolean Algebra, K-map)",
+  "qa": [
+   {
+    "q": "The radix of the hexadecimal system is",
+    "a": "16 (digits 0–9 and A–F)."
+   },
+   {
+    "q": "Binary 1101.101 in decimal is",
+    "a": "13.625 (8 + 4 + 1 + 0.5 + 0.125)."
+   },
+   {
+    "q": "Minimum NOR gates to realize an AND gate",
+    "a": "3 (invert both inputs, then NOR them)."
+   },
+   {
+    "q": "The dual of A + 0 = A is",
+    "a": "A · 1 = A (swap + with · and 0 with 1)."
+   },
+   {
+    "q": "Don't-care conditions in a K-map are",
+    "a": "treated as 0 or 1, whichever gives the larger groups."
+   }
+  ],
+  "keyPoints": "Number of minterms for n variables = 2^n. SOP uses minterms (Σm); POS uses maxterms (ΠM)."
+ },
+ "2.2": {
+  "sub": "2.2",
+  "title": "Combinational and Arithmetic Circuits",
+  "qa": [
+   {
+    "q": "A full adder has how many inputs and outputs?",
+    "a": "3 inputs (A, B, Cin) and 2 outputs (Sum, Cout)."
+   },
+   {
+    "q": "The carry of a full adder is",
+    "a": "Cout = AB + BCin + ACin."
+   },
+   {
+    "q": "A carry look-ahead adder is faster than a ripple-carry adder because",
+    "a": "it generates carries in parallel using generate (G = AB) and propagate (P = A⊕B) terms."
+   },
+   {
+    "q": "The number of 4:1 MUXes needed to build a 16:1 MUX",
+    "a": "5 (four in the first stage, one in the second)."
+   },
+   {
+    "q": "Magnitude comparator outputs",
+    "a": "A > B, A = B and A < B."
+   }
+  ],
+  "keyPoints": "2's complement of X = 1's complement + 1. Subtraction A − B = A + (2's complement of B)."
+ },
+ "2.3": {
+  "sub": "2.3",
+  "title": "Sequential Logic Circuits",
+  "qa": [
+   {
+    "q": "A counter that counts 0 to 9 and resets is",
+    "a": "a decade (BCD, mod-10) counter."
+   },
+   {
+    "q": "The characteristic equation of a JK flip-flop is",
+    "a": "Q(t+1) = JQ' + K'Q."
+   },
+   {
+    "q": "The characteristic equation of an SR flip-flop is",
+    "a": "Q(t+1) = S + R'Q, with SR = 0."
+   },
+   {
+    "q": "Shift register that allows loading all bits at once and reading all at once",
+    "a": "PIPO (parallel-in parallel-out)."
+   },
+   {
+    "q": "Maximum clock frequency of an n-stage ripple counter",
+    "a": "f ≤ 1/(n × tpd), where tpd is one flip-flop's delay."
+   }
+  ],
+  "keyPoints": "Latch = level-triggered; flip-flop = edge-triggered. Mod-N counter needs ⌈log₂N⌉ flip-flops."
+ },
+ "2.4": {
+  "sub": "2.4",
+  "title": "Microprocessor Architecture and Assembly Language",
+  "qa": [
+   {
+    "q": "The 8085 has how many pins?",
+    "a": "40 pins, operating from a single +5 V supply."
+   },
+   {
+    "q": "The 8085 has how many general-purpose 8-bit registers?",
+    "a": "6 (B, C, D, E, H, L), usable as pairs BC, DE, HL."
+   },
+   {
+    "q": "The instruction DAA is used for",
+    "a": "decimal adjust after BCD addition."
+   },
+   {
+    "q": "Number of T-states for an opcode fetch in 8085",
+    "a": "4 T-states (4 or 6 depending on the instruction)."
+   },
+   {
+    "q": "Segment registers in 8086",
+    "a": "CS, DS, SS and ES."
+   }
+  ],
+  "keyPoints": "8085 instruction groups: data transfer, arithmetic, logical, branching, machine control."
+ },
+ "2.5": {
+  "sub": "2.5",
+  "title": "Microprocessor System (Memory, PPI, Serial Interface, DMA)",
+  "qa": [
+   {
+    "q": "The 8253/8254 is a",
+    "a": "programmable interval timer/counter with three 16-bit counters."
+   },
+   {
+    "q": "The 8237 is a",
+    "a": "DMA controller with 4 channels."
+   },
+   {
+    "q": "Memory-mapped I/O means",
+    "a": "I/O devices share the memory address space and are accessed with memory instructions (e.g. MOV, LDA)."
+   },
+   {
+    "q": "Access time is lowest for",
+    "a": "SRAM among memory chips (used for cache)."
+   },
+   {
+    "q": "Number of address lines needed for 1 MB memory",
+    "a": "20."
+   }
+  ],
+  "keyPoints": "DMA modes: burst (block), cycle stealing, transparent (hidden)."
+ },
+ "2.6": {
+  "sub": "2.6",
+  "title": "Interrupt Operations",
+  "qa": [
+   {
+    "q": "RST 5.5 vector address",
+    "a": "002CH (5.5 × 8 = 44)."
+   },
+   {
+    "q": "RST 6.5 vector address",
+    "a": "0034H (6.5 × 8 = 52)."
+   },
+   {
+    "q": "RST 7.5 is triggered by",
+    "a": "a rising edge; RST 6.5 and 5.5 are level-triggered."
+   },
+   {
+    "q": "INT n instruction in 8086 is",
+    "a": "a software interrupt that jumps to the ISR whose address is in the IVT at n × 4."
+   },
+   {
+    "q": "Which interrupt has the lowest priority in 8085?",
+    "a": "INTR."
+   }
+  ],
+  "keyPoints": "Hardware interrupts come from external pins; software interrupts come from instructions (RST n in 8085, INT n in 8086)."
+ },
+ "3.1": {
+  "sub": "3.1",
+  "title": "Introduction to C Programming",
+  "qa": [
+   {
+    "q": "What is the output of printf(\"%d\", 5 > 3 > 1);?",
+    "a": "0. 5 > 3 gives 1, then 1 > 1 is false (0)."
+   },
+   {
+    "q": "Which storage class retains its value between function calls?",
+    "a": "static."
+   },
+   {
+    "q": "What is the default value of an uninitialized global int in C?",
+    "a": "0. Local (auto) variables contain garbage."
+   },
+   {
+    "q": "Which header is needed for strlen, strcpy and strcmp?",
+    "a": "<string.h>."
+   },
+   {
+    "q": "The value of 10 >> 1 is",
+    "a": "5 (right shift by 1 divides by 2)."
+   }
+  ],
+  "keyPoints": "Operator precedence (high to low): () [] → unary (++ -- ! sizeof) → * / % → + - → shifts → relational → == != → & → ^ → | → && → || → ?: → assignment → comma."
+ },
+ "3.2": {
+  "sub": "3.2",
+  "title": "Pointers, Structures and Data Files in C",
+  "qa": [
+   {
+    "q": "What is the size of a pointer on a 64-bit system?",
+    "a": "Usually 8 bytes, regardless of the type it points to."
+   },
+   {
+    "q": "What does a void pointer mean?",
+    "a": "A generic pointer that can hold any address; it must be cast before being dereferenced."
+   },
+   {
+    "q": "Function used to resize dynamically allocated memory",
+    "a": "realloc()."
+   },
+   {
+    "q": "Difference between \"w\" and \"w+\" modes",
+    "a": "\"w\" is write-only; \"w+\" allows both reading and writing (the file is truncated)."
+   },
+   {
+    "q": "What does fgets(str, n, fp) read?",
+    "a": "At most n−1 characters or up to a newline, storing '\\0' at the end."
+   }
+  ],
+  "keyPoints": "Structure vs union: structure size = sum of members (+ padding), all members usable together; union size = largest member, one member at a time."
+ },
+ "3.3": {
+  "sub": "3.3",
+  "title": "C++ Constructs: Objects and Classes",
+  "qa": [
+   {
+    "q": "When is a copy constructor called?",
+    "a": "When an object is initialized from another object, passed by value, or returned by value."
+   },
+   {
+    "q": "What is a default constructor?",
+    "a": "A constructor that takes no arguments (or has all default arguments)."
+   },
+   {
+    "q": "Can a constructor be private?",
+    "a": "Yes. It is used in the Singleton pattern to stop outside object creation."
+   },
+   {
+    "q": "Which operator is used to allocate memory in C++?",
+    "a": "new (and delete to release it)."
+   },
+   {
+    "q": "What is an initializer list used for?",
+    "a": "Initializing const members, reference members and base classes in a constructor."
+   }
+  ],
+  "keyPoints": "OOP pillars: encapsulation, abstraction, inheritance, polymorphism."
+ },
+ "3.4": {
+  "sub": "3.4",
+  "title": "Features of Object-Oriented Programming",
+  "qa": [
+   {
+    "q": "Which operator is overloaded for cout << obj?",
+    "a": "operator<< as a friend (non-member) function taking ostream& and the object."
+   },
+   {
+    "q": "Is the constructor of a base class inherited?",
+    "a": "No. Constructors are not inherited, but the base constructor is called when a derived object is created."
+   },
+   {
+    "q": "Function overriding differs from overloading because",
+    "a": "overriding redefines a base-class function with the same signature in a derived class; overloading uses different signatures in the same scope."
+   },
+   {
+    "q": "Multilevel inheritance example",
+    "a": "A → B → C, where C derives from B, which derives from A."
+   },
+   {
+    "q": "Class-to-class conversion is done using",
+    "a": "a one-argument constructor in the destination class or a conversion operator in the source class."
+   }
+  ],
+  "keyPoints": "Access after inheritance — public: pub→pub, prot→prot; protected: pub/prot→prot; private: pub/prot→private. Base private members are never directly accessible."
+ },
+ "3.5": {
+  "sub": "3.5",
+  "title": "Virtual Functions and File Handling in C++",
+  "qa": [
+   {
+    "q": "Can we create a pointer to an abstract class?",
+    "a": "Yes. Pointers and references are allowed; only objects cannot be created."
+   },
+   {
+    "q": "What is early binding?",
+    "a": "Resolving the function call at compile time (non-virtual functions, overloading)."
+   },
+   {
+    "q": "Which function returns the current get-pointer position in a file stream?",
+    "a": "tellg() (tellp() for the put pointer)."
+   },
+   {
+    "q": "Which function moves the get pointer in a file stream?",
+    "a": "seekg() (seekp() for the put pointer)."
+   },
+   {
+    "q": "What does endl do?",
+    "a": "Inserts a newline and flushes the output buffer."
+   }
+  ],
+  "keyPoints": "Stream error states: goodbit, eofbit, failbit, badbit; check with good(), eof(), fail(), bad()."
+ },
+ "3.6": {
+  "sub": "3.6",
+  "title": "Generic Programming and Exception Handling",
+  "qa": [
+   {
+    "q": "Difference between vector and list",
+    "a": "vector is a dynamic array (fast random access); list is a doubly linked list (fast insertion/deletion anywhere)."
+   },
+   {
+    "q": "Which STL container follows LIFO?",
+    "a": "stack (a container adapter)."
+   },
+   {
+    "q": "Which STL container follows FIFO?",
+    "a": "queue (a container adapter)."
+   },
+   {
+    "q": "What is template specialization?",
+    "a": "Providing a separate implementation of a template for a specific type."
+   },
+   {
+    "q": "Can a constructor throw an exception?",
+    "a": "Yes, and it is the standard way to signal construction failure (the destructor is not called for that object)."
+   }
+  ],
+  "keyPoints": "Exception flow: throw → stack unwinding (local objects destroyed) → first matching catch. Use noexcept for non-throwing functions."
+ },
+ "4.1": {
+  "sub": "4.1",
+  "title": "Control and Central Processing Units",
+  "qa": [
+   {
+    "q": "The number of stages in a classic RISC pipeline",
+    "a": "5: IF, ID, EX, MEM, WB."
+   },
+   {
+    "q": "Horizontal vs vertical microprogramming",
+    "a": "Horizontal: wide words with one bit per control signal (fast, more memory). Vertical: encoded fields (compact, needs decoding)."
+   },
+   {
+    "q": "In register indirect addressing, the effective address is",
+    "a": "the content of the specified register."
+   },
+   {
+    "q": "An instruction format with opcode 8 bits and address 16 bits has total length",
+    "a": "24 bits."
+   },
+   {
+    "q": "Superscalar processors",
+    "a": "issue more than one instruction per clock cycle using multiple pipelines."
+   }
+  ],
+  "keyPoints": "CPI = cycles per instruction; CPU time = instruction count × CPI × clock period."
+ },
+ "4.2": {
+  "sub": "4.2",
+  "title": "Computer Arithmetic and Memory System",
+  "qa": [
+   {
+    "q": "A cache has 2^k lines and memory has 2^m blocks in direct mapping. The tag bits are",
+    "a": "m − k."
+   },
+   {
+    "q": "Set-associative cache: a 4-way cache with 64 lines has how many sets?",
+    "a": "16 sets (64/4)."
+   },
+   {
+    "q": "Number of bits in a memory address for 4 GB byte-addressable memory",
+    "a": "32."
+   },
+   {
+    "q": "Miss penalty is",
+    "a": "the extra time needed to fetch a block from the lower level on a cache miss."
+   },
+   {
+    "q": "Main memory is usually implemented using",
+    "a": "DRAM; cache using SRAM."
+   }
+  ],
+  "keyPoints": "Cache address split — Direct: Tag | Line | Word. Set-associative: Tag | Set | Word. Fully associative: Tag | Word."
+ },
+ "4.3": {
+  "sub": "4.3",
+  "title": "Input-Output Organization and Multiprocessors",
+  "qa": [
+   {
+    "q": "Which data transfer mode is fastest for large blocks?",
+    "a": "DMA in burst mode."
+   },
+   {
+    "q": "Interrupt-driven I/O is better than programmed I/O because",
+    "a": "the CPU can do other work until the device interrupts."
+   },
+   {
+    "q": "An Omega network is a type of",
+    "a": "multistage interconnection network built from 2×2 switches."
+   },
+   {
+    "q": "MESI protocol states",
+    "a": "Modified, Exclusive, Shared, Invalid."
+   },
+   {
+    "q": "The I/O processor (IOP)",
+    "a": "is a dedicated processor that handles I/O operations, relieving the CPU."
+   }
+  ],
+  "keyPoints": "Amdahl's law: speedup = 1/((1 − f) + f/p), where f = parallelizable fraction and p = number of processors."
+ },
+ "4.4": {
+  "sub": "4.4",
+  "title": "Hardware-Software Design Issues in Embedded Systems",
+  "qa": [
+   {
+    "q": "Examples of embedded systems",
+    "a": "washing machine controllers, microwave ovens, digital cameras, routers, car ECUs, pacemakers."
+   },
+   {
+    "q": "Design metrics of embedded systems",
+    "a": "NRE cost, unit cost, size, performance, power, flexibility, time-to-market, maintainability, correctness, safety."
+   },
+   {
+    "q": "Difference between GPP and single-purpose processor",
+    "a": "GPP: flexible, programmable, low NRE. Single-purpose: fast, small, low power, high NRE, not programmable."
+   },
+   {
+    "q": "An emulator vs simulator",
+    "a": "A simulator imitates the target in software on the host; an emulator uses hardware to mimic the target in the real circuit."
+   },
+   {
+    "q": "The IC technologies for embedded systems include",
+    "a": "full-custom VLSI, semi-custom ASIC (gate array, standard cell), and PLDs/FPGAs."
+   }
+  ],
+  "keyPoints": "Processor technology choices: general-purpose, application-specific (ASIP), single-purpose. IC technology choices: full-custom, semi-custom, PLD."
+ },
+ "4.5": {
+  "sub": "4.5",
+  "title": "Real-Time Operating and Control Systems",
+  "qa": [
+   {
+    "q": "Task states in an RTOS",
+    "a": "ready, running, blocked (waiting), and suspended/dormant."
+   },
+   {
+    "q": "Mutex vs semaphore",
+    "a": "A mutex has ownership and is used for mutual exclusion; a counting semaphore tracks available resources and can be signaled by any task."
+   },
+   {
+    "q": "Schedulability bound for RMS with n tasks",
+    "a": "U ≤ n(2^(1/n) − 1), about 69% for large n."
+   },
+   {
+    "q": "Schedulability condition for EDF",
+    "a": "total utilization U = Σ(Ci/Ti) ≤ 1."
+   },
+   {
+    "q": "Components of a closed-loop control system",
+    "a": "reference input, controller, plant, sensor (feedback), and error detector."
+   }
+  ],
+  "keyPoints": "Latency = time from event to start of response; jitter = variation in latency. An RTOS minimizes both."
+ },
+ "4.6": {
+  "sub": "4.6",
+  "title": "Hardware Description Language (VHDL) and IC Technology",
+  "qa": [
+   {
+    "q": "VHDL is",
+    "a": "not case sensitive."
+   },
+   {
+    "q": "The keyword that begins a comment in VHDL",
+    "a": "-- (two hyphens)."
+   },
+   {
+    "q": "A signal vs a variable in VHDL",
+    "a": "A signal represents a wire and updates after the process suspends; a variable updates immediately and exists only in the process."
+   },
+   {
+    "q": "std_logic_vector(7 downto 0) represents",
+    "a": "an 8-bit bus with bit 7 as the MSB."
+   },
+   {
+    "q": "Which statement is used for a multi-way branch inside a process?",
+    "a": "case ... when ... end case."
+   }
+  ],
+  "keyPoints": "VHDL design flow: specification → HDL coding → simulation → synthesis → place & route → implementation (FPGA/ASIC)."
+ },
+ "5.1": {
+  "sub": "5.1",
+  "title": "Introduction to Computer Networks and Physical Layer",
+  "qa": [
+   {
+    "q": "Which layer provides end-to-end delivery and reliability?",
+    "a": "The transport layer."
+   },
+   {
+    "q": "Which transmission mode is used by a walkie-talkie?",
+    "a": "Half duplex (both directions, but one at a time)."
+   },
+   {
+    "q": "Nyquist bit rate for a noiseless channel",
+    "a": "2B log₂L, where L is the number of signal levels."
+   },
+   {
+    "q": "Which device is used to connect networks with different protocols?",
+    "a": "Gateway."
+   },
+   {
+    "q": "Which topology has the highest fault tolerance?",
+    "a": "Mesh."
+   }
+  ],
+  "keyPoints": "TCP/IP layers: Application, Transport, Internet, Network Access (Link). Devices: repeater/hub (L1), bridge/switch (L2), router (L3), gateway (all layers)."
+ },
+ "5.2": {
+  "sub": "5.2",
+  "title": "Data Link Layer",
+  "qa": [
+   {
+    "q": "Which is the MAC broadcast address?",
+    "a": "FF:FF:FF:FF:FF:FF."
+   },
+   {
+    "q": "Number of redundant bits in Hamming code for 4 data bits",
+    "a": "3 (Hamming (7,4)): 2^r ≥ m + r + 1."
+   },
+   {
+    "q": "The sublayers of the data link layer",
+    "a": "LLC (Logical Link Control) and MAC (Medium Access Control)."
+   },
+   {
+    "q": "Channel efficiency of stop-and-wait",
+    "a": "1/(1 + 2a), where a = propagation time/transmission time."
+   },
+   {
+    "q": "Maximum Ethernet (802.3) payload",
+    "a": "1500 bytes (MTU)."
+   }
+  ],
+  "keyPoints": "Error control protocols: Stop-and-Wait ARQ (W = 1), Go-Back-N (Ws ≤ 2^m − 1, Wr = 1), Selective Repeat (Ws = Wr ≤ 2^(m−1))."
+ },
+ "5.3": {
+  "sub": "5.3",
+  "title": "Network Layer",
+  "qa": [
+   {
+    "q": "Loopback address of IPv4",
+    "a": "127.0.0.1 (IPv6: ::1)."
+   },
+   {
+    "q": "Which protocol assigns IP addresses automatically?",
+    "a": "DHCP (UDP ports 67/68)."
+   },
+   {
+    "q": "NAT is used to",
+    "a": "translate private IP addresses to a public IP address for Internet access."
+   },
+   {
+    "q": "Number of subnets using /28 in a class C network",
+    "a": "16 subnets (4 borrowed bits), each with 14 usable hosts."
+   },
+   {
+    "q": "IPv4 header minimum size",
+    "a": "20 bytes. IPv6 fixed header size: 40 bytes."
+   }
+  ],
+  "keyPoints": "Private ranges: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16. Usable hosts = 2^(host bits) − 2."
+ },
+ "5.4": {
+  "sub": "5.4",
+  "title": "Transport Layer",
+  "qa": [
+   {
+    "q": "Which fields are in the TCP header but not UDP?",
+    "a": "Sequence number, acknowledgement number, window size, flags (SYN, ACK, FIN, RST, PSH, URG)."
+   },
+   {
+    "q": "What is the purpose of the PSH flag?",
+    "a": "Asks the receiver to deliver data to the application immediately."
+   },
+   {
+    "q": "Port number used by DNS",
+    "a": "53."
+   },
+   {
+    "q": "Port used by Telnet",
+    "a": "23."
+   },
+   {
+    "q": "TCP congestion control phases",
+    "a": "slow start, congestion avoidance (AIMD), fast retransmit and fast recovery."
+   }
+  ],
+  "keyPoints": "Common ports: FTP 20/21, SSH 22, Telnet 23, SMTP 25, DNS 53, DHCP 67/68, HTTP 80, POP3 110, IMAP 143, SNMP 161, HTTPS 443."
+ },
+ "5.5": {
+  "sub": "5.5",
+  "title": "Application Layer",
+  "qa": [
+   {
+    "q": "Which DNS record gives an alias for a domain?",
+    "a": "CNAME."
+   },
+   {
+    "q": "Which HTTP method is used to send form data to a server?",
+    "a": "POST (GET sends data in the URL)."
+   },
+   {
+    "q": "HTTP status code 404 means",
+    "a": "Not Found. 200 = OK, 301 = moved permanently, 500 = internal server error."
+   },
+   {
+    "q": "Which protocol provides secure remote login?",
+    "a": "SSH."
+   },
+   {
+    "q": "MIME is used for",
+    "a": "sending non-text data (images, attachments) through e-mail."
+   }
+  ],
+  "keyPoints": "Application-layer paradigms: client-server (web, e-mail) vs peer-to-peer (BitTorrent). DNS resolution: recursive vs iterative queries."
+ },
+ "5.6": {
+  "sub": "5.6",
+  "title": "Network Security",
+  "qa": [
+   {
+    "q": "Which algorithm is used for key exchange over an insecure channel?",
+    "a": "Diffie-Hellman."
+   },
+   {
+    "q": "MD5 and SHA are",
+    "a": "hash functions producing a fixed-size message digest (MD5 = 128 bits, SHA-1 = 160 bits, SHA-256 = 256 bits)."
+   },
+   {
+    "q": "A DDoS attack is",
+    "a": "a distributed denial of service using many compromised machines (a botnet)."
+   },
+   {
+    "q": "A certificate authority (CA)",
+    "a": "issues digital certificates that bind public keys to identities (PKI)."
+   },
+   {
+    "q": "The port-based network access control standard is",
+    "a": "IEEE 802.1X."
+   }
+  ],
+  "keyPoints": "Symmetric: DES, 3DES, AES, RC4 (fast, key sharing problem). Asymmetric: RSA, ECC, Diffie-Hellman (slow, solves key distribution)."
+ },
+ "6.1": {
+  "sub": "6.1",
+  "title": "Finite Automata and Regular Languages",
+  "qa": [
+   {
+    "q": "The number of states in the minimal DFA for strings over {a, b} ending with \"ab\"",
+    "a": "3."
+   },
+   {
+    "q": "A regular expression for strings with at least one a over {a, b}",
+    "a": "(a + b)*a(a + b)*."
+   },
+   {
+    "q": "Regular expression for all strings of even length over {a, b}",
+    "a": "((a + b)(a + b))*."
+   },
+   {
+    "q": "Which is more powerful: DFA, NFA or ε-NFA?",
+    "a": "All are equally powerful; they accept exactly the regular languages."
+   },
+   {
+    "q": "Two-way finite automata recognize",
+    "a": "exactly the regular languages (no extra power)."
+   }
+  ],
+  "keyPoints": "RE identities: ε·R = R, ∅ + R = R, (R*)* = R*, R + R = R, ∅* = ε."
+ },
+ "6.2": {
+  "sub": "6.2",
+  "title": "Context-Free Languages and Pushdown Automata",
+  "qa": [
+   {
+    "q": "The language of balanced parentheses is",
+    "a": "context-free but not regular."
+   },
+   {
+    "q": "A grammar in which a variable derives itself as the leftmost symbol (A → Aα) has",
+    "a": "left recursion, which must be removed for top-down parsing."
+   },
+   {
+    "q": "A PDA can accept by",
+    "a": "final state or by empty stack (equivalent in power for NPDAs)."
+   },
+   {
+    "q": "The language of palindromes over {a, b} is",
+    "a": "context-free but not deterministic context-free."
+   },
+   {
+    "q": "Removing ε-productions, unit productions and useless symbols is done",
+    "a": "before converting a grammar to CNF."
+   }
+  ],
+  "keyPoints": "CFLs are closed under union, concatenation, Kleene star, reversal, homomorphism and intersection with a regular language."
+ },
+ "6.3": {
+  "sub": "6.3",
+  "title": "Turing Machines and Computability",
+  "qa": [
+   {
+    "q": "What is a decidable problem?",
+    "a": "A problem for which a TM always halts with the correct yes/no answer."
+   },
+   {
+    "q": "Is P = NP?",
+    "a": "Unknown. It is the most famous open problem in computer science."
+   },
+   {
+    "q": "NP-hard means",
+    "a": "every NP problem reduces to it in polynomial time; it need not be in NP itself."
+   },
+   {
+    "q": "The complement of an RE but non-recursive language is",
+    "a": "not RE."
+   },
+   {
+    "q": "Post Correspondence Problem is",
+    "a": "undecidable."
+   }
+  ],
+  "keyPoints": "Relationships: Regular ⊂ CFL ⊂ CSL ⊂ Recursive ⊂ RE. P ⊆ NP; NP-complete = NP ∩ NP-hard."
+ },
+ "6.4": {
+  "sub": "6.4",
+  "title": "Introduction to Computer Graphics and Graphics Hardware",
+  "qa": [
+   {
+    "q": "Refresh rate unit",
+    "a": "Hertz (frames per second)."
+   },
+   {
+    "q": "Aspect ratio of a display",
+    "a": "ratio of width to height, e.g. 16:9."
+   },
+   {
+    "q": "Midpoint circle algorithm uses",
+    "a": "8-way symmetry of the circle and an integer decision parameter."
+   },
+   {
+    "q": "A color look-up table (palette)",
+    "a": "stores a limited set of colors; the frame buffer holds indices into it, saving memory."
+   },
+   {
+    "q": "Bit planes: a frame buffer with 8 bits per pixel has",
+    "a": "8 bit planes."
+   }
+  ],
+  "keyPoints": "Bresenham decision parameter for |m| < 1: p₀ = 2Δy − Δx; if p < 0, next p = p + 2Δy, else p = p + 2Δy − 2Δx (and y increments)."
+ },
+ "6.5": {
+  "sub": "6.5",
+  "title": "Two-Dimensional Transformations, Viewing and Clipping",
+  "qa": [
+   {
+    "q": "The 2D rotation matrix about the origin in homogeneous form",
+    "a": "[[cos θ, −sin θ, 0], [sin θ, cos θ, 0], [0, 0, 1]]."
+   },
+   {
+    "q": "Reflection about the origin",
+    "a": "(x, y) → (−x, −y), equivalent to a 180° rotation."
+   },
+   {
+    "q": "Scaling about a fixed point (xf, yf)",
+    "a": "translate to origin, scale, translate back."
+   },
+   {
+    "q": "Which transformation preserves shape and size?",
+    "a": "Rigid-body transformations (translation, rotation, reflection)."
+   },
+   {
+    "q": "Inverse of a translation by (tx, ty)",
+    "a": "translation by (−tx, −ty)."
+   }
+  ],
+  "keyPoints": "Window-to-viewport mapping: xv = xvmin + (xw − xwmin)·sx, sx = (xvmax − xvmin)/(xwmax − xwmin); similarly for y."
+ },
+ "6.6": {
+  "sub": "6.6",
+  "title": "Three-Dimensional Transformations and Projections",
+  "qa": [
+   {
+    "q": "Visible surface detection algorithm using a depth buffer",
+    "a": "Z-buffer (depth buffer) algorithm."
+   },
+   {
+    "q": "The back-face detection test",
+    "a": "a polygon is a back face if its normal N and view direction V satisfy V·N > 0."
+   },
+   {
+    "q": "Which projection is used in architectural drawings for realism?",
+    "a": "Perspective projection."
+   },
+   {
+    "q": "Parallel projections are classified into",
+    "a": "orthographic and oblique."
+   },
+   {
+    "q": "Number of vanishing points in a two-point perspective",
+    "a": "2."
+   }
+  ],
+  "keyPoints": "Illumination: ambient + diffuse (Lambert, ∝ cos θ) + specular (Phong, ∝ cosⁿ α). Shading: flat, Gouraud (interpolate intensity), Phong (interpolate normals)."
+ },
+ "7.1": {
+  "sub": "7.1",
+  "title": "Data Structures: Lists, Stacks, Queues and Trees",
+  "qa": [
+   {
+    "q": "Infix to postfix conversion uses which data structure?",
+    "a": "Stack."
+   },
+   {
+    "q": "The number of edges in a tree with n nodes",
+    "a": "n − 1."
+   },
+   {
+    "q": "A complete binary tree with n nodes has height",
+    "a": "⌊log₂ n⌋."
+   },
+   {
+    "q": "Which traversal is used to delete a tree?",
+    "a": "Post-order (children before parent)."
+   },
+   {
+    "q": "Prefix form of (A + B) * C",
+    "a": "*+ABC."
+   }
+  ],
+  "keyPoints": "Linked list vs array: array O(1) access, costly insert/delete; linked list O(n) access, O(1) insert/delete at a known position."
+ },
+ "7.2": {
+  "sub": "7.2",
+  "title": "Sorting, Searching, Hashing and Graphs",
+  "qa": [
+   {
+    "q": "Worst-case complexity of heap sort",
+    "a": "O(n log n)."
+   },
+   {
+    "q": "Number of swaps in selection sort",
+    "a": "at most n − 1, which is its advantage."
+   },
+   {
+    "q": "Time complexity of Dijkstra with a binary heap",
+    "a": "O((V + E) log V)."
+   },
+   {
+    "q": "Load factor of a hash table",
+    "a": "α = n/m (number of keys/table size)."
+   },
+   {
+    "q": "Which algorithm finds the MST by growing a tree from a vertex?",
+    "a": "Prim's algorithm."
+   }
+  ],
+  "keyPoints": "Sorting complexities (avg): bubble/insertion/selection O(n²); merge/heap/quick O(n log n); radix O(d(n + k)). Binary search O(log n)."
+ },
+ "7.3": {
+  "sub": "7.3",
+  "title": "Data Models, Normalization and SQL",
+  "qa": [
+   {
+    "q": "Which SQL command removes a table completely?",
+    "a": "DROP TABLE. DELETE removes rows; TRUNCATE removes all rows quickly."
+   },
+   {
+    "q": "Cardinality ratios in E-R model",
+    "a": "1:1, 1:N, M:1, M:N."
+   },
+   {
+    "q": "A derived attribute is shown in an E-R diagram by",
+    "a": "a dashed ellipse (e.g. age derived from date of birth)."
+   },
+   {
+    "q": "Armstrong's axioms",
+    "a": "reflexivity, augmentation and transitivity."
+   },
+   {
+    "q": "Natural join ⋈",
+    "a": "joins tuples with equal values on common attributes and keeps one copy of those attributes."
+   }
+  ],
+  "keyPoints": "E-R symbols: rectangle = entity, double rectangle = weak entity, diamond = relationship, ellipse = attribute, double ellipse = multivalued, underline = key."
+ },
+ "7.4": {
+  "sub": "7.4",
+  "title": "Transaction Processing, Concurrency Control and Recovery",
+  "qa": [
+   {
+    "q": "Serializability types",
+    "a": "conflict serializability and view serializability."
+   },
+   {
+    "q": "Which lock allows a transaction to read and write?",
+    "a": "Exclusive (X) lock."
+   },
+   {
+    "q": "Two-phase commit protocol is used in",
+    "a": "distributed databases to ensure all sites commit or all abort."
+   },
+   {
+    "q": "A cascading rollback is",
+    "a": "when one transaction's failure forces rollback of others that read its uncommitted data."
+   },
+   {
+    "q": "Shadow paging is",
+    "a": "a recovery technique that keeps a shadow page table unchanged and switches to the new table on commit."
+   }
+  ],
+  "keyPoints": "Anomalies: lost update, dirty read, unrepeatable read, phantom read. SQL isolation levels: read uncommitted, read committed, repeatable read, serializable."
+ },
+ "7.5": {
+  "sub": "7.5",
+  "title": "Operating System and Process Management",
+  "qa": [
+   {
+    "q": "Convoy effect occurs in",
+    "a": "FCFS scheduling (short jobs wait behind a long one)."
+   },
+   {
+    "q": "Turnaround time",
+    "a": "completion time − arrival time. Waiting time = turnaround time − burst time."
+   },
+   {
+    "q": "The fork() system call",
+    "a": "creates a new child process."
+   },
+   {
+    "q": "Resource allocation graph with a cycle and single-instance resources",
+    "a": "implies deadlock."
+   },
+   {
+    "q": "Peterson's solution is for",
+    "a": "mutual exclusion between two processes."
+   }
+  ],
+  "keyPoints": "Deadlock handling: prevention (break a condition), avoidance (Banker's), detection & recovery, or ignore (ostrich approach)."
+ },
+ "7.6": {
+  "sub": "7.6",
+  "title": "Memory Management, File Systems and System Administration",
+  "qa": [
+   {
+    "q": "Segmentation suffers from",
+    "a": "external fragmentation."
+   },
+   {
+    "q": "Effective access time with TLB",
+    "a": "EAT = h(t_tlb + t_mem) + (1 − h)(t_tlb + 2 t_mem)."
+   },
+   {
+    "q": "Number of pages for a 32-bit address space with 4 KB pages",
+    "a": "2²⁰ (about 1 million)."
+   },
+   {
+    "q": "Which disk scheduling algorithm is also called the elevator algorithm?",
+    "a": "SCAN."
+   },
+   {
+    "q": "The FAT file system uses",
+    "a": "linked allocation with the links stored in a table (File Allocation Table)."
+   }
+  ],
+  "keyPoints": "Page replacement: FIFO, Optimal, LRU, LFU, Clock (second chance). Only FIFO suffers Belady's anomaly (stack algorithms like LRU and OPT do not)."
+ },
+ "8.1": {
+  "sub": "8.1",
+  "title": "Software Process and Requirements",
+  "qa": [
+   {
+    "q": "The waterfall model is suitable when",
+    "a": "requirements are well understood and stable."
+   },
+   {
+    "q": "Feasibility study checks",
+    "a": "technical, economic, legal, operational and schedule feasibility."
+   },
+   {
+    "q": "The RAD model emphasizes",
+    "a": "very short development cycles using component reuse and CASE tools."
+   },
+   {
+    "q": "Which model combines waterfall with iterations and risk analysis?",
+    "a": "The spiral model."
+   },
+   {
+    "q": "Requirement engineering process steps",
+    "a": "feasibility study, elicitation & analysis, specification, validation, management."
+   }
+  ],
+  "keyPoints": "Software quality attributes (McCall/ISO 25010): correctness, reliability, efficiency, integrity/security, usability, maintainability, testability, portability, reusability, interoperability."
+ },
+ "8.2": {
+  "sub": "8.2",
+  "title": "Software Design and Architecture",
+  "qa": [
+   {
+    "q": "Fan-in and fan-out",
+    "a": "fan-in = number of modules that call a module (high is good); fan-out = number of modules it calls (keep moderate)."
+   },
+   {
+    "q": "The MVC pattern separates",
+    "a": "Model (data), View (presentation) and Controller (input handling)."
+   },
+   {
+    "q": "Layered architecture example",
+    "a": "OSI model; each layer serves the one above it."
+   },
+   {
+    "q": "Coupling where modules share global data is",
+    "a": "common coupling."
+   },
+   {
+    "q": "Stamp coupling",
+    "a": "passing a whole data structure when only part of it is needed."
+   }
+  ],
+  "keyPoints": "Design concepts: abstraction, refinement, modularity, architecture, information hiding, functional independence (cohesion/coupling), refactoring."
+ },
+ "8.3": {
+  "sub": "8.3",
+  "title": "Software Testing, Cost Estimation, Quality and Configuration Management",
+  "qa": [
+   {
+    "q": "Equivalence partitioning",
+    "a": "divides input data into classes that should be treated the same, testing one value from each."
+   },
+   {
+    "q": "Verification vs validation",
+    "a": "verification: \"Are we building the product right?\"; validation: \"Are we building the right product?\""
+   },
+   {
+    "q": "Smoke testing",
+    "a": "a quick test of the main functions to decide whether a build is stable enough for further testing."
+   },
+   {
+    "q": "Putnam model is based on",
+    "a": "the Rayleigh curve for staffing over project duration."
+   },
+   {
+    "q": "Software configuration items (SCIs)",
+    "a": "work products under configuration control: SRS, design, code, test plans, manuals."
+   }
+  ],
+  "keyPoints": "Testing levels: unit → integration → system → acceptance. White-box: statement, branch, path coverage. Black-box: equivalence partitioning, BVA, cause-effect graphing."
+ },
+ "8.4": {
+  "sub": "8.4",
+  "title": "Object-Oriented Fundamentals and Analysis",
+  "qa": [
+   {
+    "q": "Number of diagrams in UML 2.x",
+    "a": "14 (7 structural, 7 behavioral)."
+   },
+   {
+    "q": "Which diagram shows physical nodes and deployed artifacts?",
+    "a": "Deployment diagram."
+   },
+   {
+    "q": "Association class",
+    "a": "a class attached to an association that holds attributes of the relationship itself."
+   },
+   {
+    "q": "A use case describes",
+    "a": "a sequence of actions a system performs that yields an observable result of value to an actor."
+   },
+   {
+    "q": "Which UP phase establishes the architecture baseline?",
+    "a": "Elaboration."
+   }
+  ],
+  "keyPoints": "UML structural diagrams: class, object, component, deployment, package, composite structure, profile. Behavioral: use case, activity, state machine, sequence, communication, timing, interaction overview."
+ },
+ "8.5": {
+  "sub": "8.5",
+  "title": "Object-Oriented Design",
+  "qa": [
+   {
+    "q": "GRASP stands for",
+    "a": "General Responsibility Assignment Software Patterns."
+   },
+   {
+    "q": "The 9 GRASP patterns",
+    "a": "Information Expert, Creator, Controller, Low Coupling, High Cohesion, Polymorphism, Pure Fabrication, Indirection, Protected Variations."
+   },
+   {
+    "q": "Pure Fabrication",
+    "a": "an invented class (not a domain concept) to achieve high cohesion and low coupling (e.g. a PersistentStorage class)."
+   },
+   {
+    "q": "Facade pattern",
+    "a": "provides a single simplified interface to a complex subsystem."
+   },
+   {
+    "q": "Strategy pattern",
+    "a": "encapsulates interchangeable algorithms behind a common interface."
+   }
+  ],
+  "keyPoints": "Creational: Singleton, Factory Method, Abstract Factory, Builder, Prototype. Structural: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy. Behavioral: Observer, Strategy, Command, Iterator, State, Template Method, etc."
+ },
+ "8.6": {
+  "sub": "8.6",
+  "title": "Object-Oriented Design Implementation",
+  "qa": [
+   {
+    "q": "Unit tests should be",
+    "a": "automated, independent and repeatable."
+   },
+   {
+    "q": "Which UML element maps to an abstract class or interface in code?",
+    "a": "A class marked {abstract}/italic, or an «interface»."
+   },
+   {
+    "q": "Code smells",
+    "a": "symptoms (duplicate code, long methods, large classes) indicating a need for refactoring."
+   },
+   {
+    "q": "Continuous integration",
+    "a": "frequently merging code to a shared repository with automated builds and tests."
+   },
+   {
+    "q": "Mapping an association with multiplicity 0..1 in code",
+    "a": "a reference attribute that may be null."
+   }
+  ],
+  "keyPoints": "Implementation flow in OOAD (Larman): DCD → class definitions; interaction diagrams → method bodies; implement from least to most coupled; write tests first."
+ },
+ "9.1": {
+  "sub": "9.1",
+  "title": "Introduction to AI and Intelligent Agents",
+  "qa": [
+   {
+    "q": "Rationality of an agent depends on",
+    "a": "the performance measure, prior knowledge, available actions and percept sequence to date."
+   },
+   {
+    "q": "An episodic environment is one where",
+    "a": "each episode (percept-action) is independent of previous ones, e.g. image classification."
+   },
+   {
+    "q": "Weak AI vs strong AI",
+    "a": "Weak AI: machines act intelligently (narrow tasks). Strong AI: machines genuinely think and have minds."
+   },
+   {
+    "q": "ELIZA was",
+    "a": "an early (1966) natural language program simulating a psychotherapist."
+   },
+   {
+    "q": "An example of a multi-agent environment",
+    "a": "chess, football, taxi driving."
+   }
+  ],
+  "keyPoints": "Agent types (simple → complex): simple reflex, model-based reflex, goal-based, utility-based, learning agent."
+ },
+ "9.2": {
+  "sub": "9.2",
+  "title": "Problem Solving and Searching Techniques",
+  "qa": [
+   {
+    "q": "Which search is optimal with non-negative step costs and no heuristic?",
+    "a": "Uniform cost search."
+   },
+   {
+    "q": "A consistent (monotonic) heuristic satisfies",
+    "a": "h(n) ≤ c(n, a, n') + h(n') for every successor n'."
+   },
+   {
+    "q": "Backtracking search for CSPs is improved by",
+    "a": "MRV (minimum remaining values), degree heuristic, least constraining value, and forward checking/arc consistency."
+   },
+   {
+    "q": "Local beam search",
+    "a": "keeps k states instead of one and selects the k best successors."
+   },
+   {
+    "q": "Tic-tac-toe game tree is searched using",
+    "a": "minimax (with alpha-beta pruning)."
+   }
+  ],
+  "keyPoints": "Search comparison: BFS O(b^d) time/space; DFS O(b^m) time, O(bm) space; IDS O(b^d) time, O(bd) space; A* optimal with admissible h."
+ },
+ "9.3": {
+  "sub": "9.3",
+  "title": "Knowledge Representation and Reasoning",
+  "qa": [
+   {
+    "q": "Horn clause",
+    "a": "a clause with at most one positive literal; used in Prolog and forward/backward chaining."
+   },
+   {
+    "q": "Universal instantiation",
+    "a": "infers P(a) from ∀x P(x) for any constant a."
+   },
+   {
+    "q": "Conditional independence in Bayesian networks",
+    "a": "a node is independent of its non-descendants given its parents."
+   },
+   {
+    "q": "Scripts in knowledge representation",
+    "a": "represent stereotyped sequences of events (e.g. a restaurant visit)."
+   },
+   {
+    "q": "Which logic handles degrees of truth?",
+    "a": "Fuzzy logic."
+   }
+  ],
+  "keyPoints": "Equivalences: P → Q ≡ ¬Q → ¬P (contrapositive); ¬(P ∧ Q) ≡ ¬P ∨ ¬Q; ¬(P ∨ Q) ≡ ¬P ∧ ¬Q; ¬∀x P ≡ ∃x ¬P."
+ },
+ "9.4": {
+  "sub": "9.4",
+  "title": "Expert Systems, NLP, Machine Vision and Robotics",
+  "qa": [
+   {
+    "q": "Who is responsible for building the knowledge base?",
+    "a": "The knowledge engineer, working with the domain expert."
+   },
+   {
+    "q": "DENDRAL was",
+    "a": "an early expert system for identifying chemical structures from mass-spectrometry data."
+   },
+   {
+    "q": "Part-of-speech tagging",
+    "a": "assigns word classes (noun, verb, adjective) to each token."
+   },
+   {
+    "q": "Named Entity Recognition",
+    "a": "identifies names of people, places, organizations, dates in text."
+   },
+   {
+    "q": "Degrees of freedom of a robot",
+    "a": "the number of independent movements (joints) it can make; a typical industrial arm has 6."
+   }
+  ],
+  "keyPoints": "NLP stages: morphological → lexical → syntactic → semantic → discourse integration → pragmatic analysis."
+ },
+ "9.5": {
+  "sub": "9.5",
+  "title": "Machine Learning, Fuzzy Logic and Genetic Algorithms",
+  "qa": [
+   {
+    "q": "Gini index is used in",
+    "a": "CART decision trees as an impurity measure."
+   },
+   {
+    "q": "Unsupervised learning examples",
+    "a": "clustering (k-means, hierarchical) and association rule mining (Apriori)."
+   },
+   {
+    "q": "Crossover types in GA",
+    "a": "single-point, two-point, uniform."
+   },
+   {
+    "q": "Elitism in GA",
+    "a": "copies the best individuals unchanged to the next generation."
+   },
+   {
+    "q": "Exploration vs exploitation",
+    "a": "In RL, trying new actions (exploration) vs using known best actions (exploitation), e.g. ε-greedy."
+   }
+  ],
+  "keyPoints": "Fuzzy membership functions: triangular, trapezoidal, Gaussian. Inference: Mamdani (fuzzy output + defuzzification) vs Sugeno (crisp functional output)."
+ },
+ "9.6": {
+  "sub": "9.6",
+  "title": "Neural Networks",
+  "qa": [
+   {
+    "q": "Number of layers in a perceptron that can solve XOR",
+    "a": "at least 2 layers of weights (input → hidden → output)."
+   },
+   {
+    "q": "Softmax activation is used for",
+    "a": "multi-class classification outputs (probabilities summing to 1)."
+   },
+   {
+    "q": "Momentum in gradient descent",
+    "a": "adds a fraction of the previous update to speed convergence and reduce oscillation."
+   },
+   {
+    "q": "CNNs are mainly used for",
+    "a": "image data; RNNs/LSTMs for sequential data."
+   },
+   {
+    "q": "Adaline differs from perceptron",
+    "a": "it updates weights using the linear (pre-activation) output with the LMS/delta rule."
+   }
+  ],
+  "keyPoints": "Learning paradigms in ANN: supervised (backprop, perceptron), unsupervised (Hebbian, Kohonen SOM), reinforcement. Loss minimized by gradient descent: w ← w − η∂E/∂w."
+ },
+ "10.1": {
+  "sub": "10.1",
+  "title": "Engineering Drawing and its Concepts",
+  "qa": [
+   {
+    "q": "Which projection is recommended by the Bureau of Indian Standards and commonly used in Nepal?",
+    "a": "First-angle projection."
+   },
+   {
+    "q": "Dimension lines are drawn as",
+    "a": "thin continuous lines with arrowheads."
+   },
+   {
+    "q": "A sectional view is drawn to",
+    "a": "show the interior details of an object."
+   },
+   {
+    "q": "The standard A4 sheet size is",
+    "a": "210 mm × 297 mm."
+   },
+   {
+    "q": "Cutting plane lines are shown as",
+    "a": "thin chain lines, thick at the ends and at changes of direction."
+   }
+  ],
+  "keyPoints": "Line types: continuous thick (visible outlines), continuous thin (dimension, hatching), dashed (hidden), chain thin (centre lines), chain thick at ends (cutting plane)."
+ },
+ "10.2": {
+  "sub": "10.2",
+  "title": "Engineering Economics",
+  "qa": [
+   {
+    "q": "Present worth of an annuity",
+    "a": "P = A[(1 + i)^n − 1]/[i(1 + i)^n]."
+   },
+   {
+    "q": "Future worth of an annuity",
+    "a": "F = A[(1 + i)^n − 1]/i."
+   },
+   {
+    "q": "Sinking fund factor (A/F)",
+    "a": "i/[(1 + i)^n − 1]."
+   },
+   {
+    "q": "Sum-of-years' digits depreciation for year k",
+    "a": "(n − k + 1)/[n(n + 1)/2] × (cost − salvage)."
+   },
+   {
+    "q": "Discounted payback period",
+    "a": "the time to recover the investment using discounted cash flows."
+   }
+  ],
+  "keyPoints": "Rule of 72: money doubles in about 72/i years at i% compound interest. Accept projects with NPV > 0, IRR > MARR, B/C > 1."
+ },
+ "10.3": {
+  "sub": "10.3",
+  "title": "Project Planning and Scheduling",
+  "qa": [
+   {
+    "q": "Standard deviation of the project duration in PERT",
+    "a": "√(sum of variances of critical activities)."
+   },
+   {
+    "q": "Probability of completing a project by time T in PERT",
+    "a": "uses Z = (T − Te)/σ and the normal distribution table."
+   },
+   {
+    "q": "Independent float",
+    "a": "EST(j) − LFT(i) − duration; may be negative (then taken as zero)."
+   },
+   {
+    "q": "Activity-on-node (AON) networks",
+    "a": "represent activities as nodes; no dummy activities are needed."
+   },
+   {
+    "q": "A project with 3 parallel paths of 10, 12 and 15 days duration takes",
+    "a": "15 days (the longest path is critical)."
+   }
+  ],
+  "keyPoints": "Network rules: EST(start) = 0; EFT = EST + duration; LFT(end) = project duration; LST = LFT − duration; critical activities have EST = LST."
+ },
+ "10.4": {
+  "sub": "10.4",
+  "title": "Project Management",
+  "qa": [
+   {
+    "q": "Schedule Variance",
+    "a": "SV = EV − PV (negative means behind schedule)."
+   },
+   {
+    "q": "Cost Variance",
+    "a": "CV = EV − AC (negative means over budget)."
+   },
+   {
+    "q": "Estimate at completion (typical)",
+    "a": "EAC = BAC/CPI."
+   },
+   {
+    "q": "Project charter",
+    "a": "the document that formally authorizes the project and the project manager."
+   },
+   {
+    "q": "Types of tender",
+    "a": "open, limited (restricted), and negotiated/direct procurement."
+   }
+  ],
+  "keyPoints": "EVM: PV (planned), EV (earned), AC (actual), BAC (budget at completion); CPI = EV/AC, SPI = EV/PV."
+ },
+ "10.5": {
+  "sub": "10.5",
+  "title": "Engineering Professional Practice and Ethics",
+  "qa": [
+   {
+    "q": "An engineer's duty to the employer includes",
+    "a": "faithful service, loyalty, confidentiality, and avoiding conflicts of interest."
+   },
+   {
+    "q": "Professional liability insurance",
+    "a": "covers claims arising from errors or negligence in professional services."
+   },
+   {
+    "q": "A patent protects",
+    "a": "new, useful and non-obvious inventions for a limited period."
+   },
+   {
+    "q": "Trademark protects",
+    "a": "distinctive names, logos and symbols identifying goods or services."
+   },
+   {
+    "q": "Cyber crime under Nepal's Electronic Transactions Act includes",
+    "a": "unauthorized access, damage to computer systems, and publishing illegal material electronically."
+   }
+  ],
+  "keyPoints": "Ethical dilemmas are resolved by prioritizing: public safety → law → client/employer → profession → self."
+ },
+ "10.6": {
+  "sub": "10.6",
+  "title": "Engineering Regulatory Body (Nepal Engineering Council)",
+  "qa": [
+   {
+    "q": "Where is the Nepal Engineering Council office located?",
+    "a": "Minbhawan, Kathmandu."
+   },
+   {
+    "q": "How many members (councilors) are in the Council?",
+    "a": "21 councilors."
+   },
+   {
+    "q": "Who appoints the NEC chairperson?",
+    "a": "The Government of Nepal (an engineer with at least 15 years' post-bachelor experience)."
+   },
+   {
+    "q": "Is NEC registration automatic after graduation?",
+    "a": "No. Since the 2079 amendment, passing the registration exam is mandatory."
+   },
+   {
+    "q": "NEC registration exam is conducted how many times a year?",
+    "a": "Four times a year, per the annual calendar."
+   }
+  ],
+  "keyPoints": "NEC Act 2055 (amended 2079) + NEC Regulations 2057 (amended 2080) govern registration, code of conduct and the licensing exam."
+ }
+}

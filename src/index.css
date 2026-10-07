@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 246 245 241;
+    --surface: 255 255 255;
+    --muted: 239 237 231;
+    --line: 223 220 211;
+    --ink: 28 32 43;
+    --sub: 92 99 114;
+    --brand: 31 42 68;
+    --brand-ink: 255 255 255;
+    --accent: 196 58 74;
+    --ok: 22 128 75;
+    --ok-soft: 222 244 231;
+    --bad: 196 43 43;
+    --bad-soft: 253 228 228;
+    --warn: 176 104 0;
+    --warn-soft: 255 241 212;
+    color-scheme: light;
+  }
+  .dark {
+    --bg: 17 20 27;
+    --surface: 25 29 38;
+    --muted: 34 39 51;
+    --line: 48 54 68;
+    --ink: 232 234 239;
+    --sub: 155 162 178;
+    --brand: 138 164 232;
+    --brand-ink: 17 20 27;
+    --accent: 240 110 125;
+    --ok: 74 200 130;
+    --ok-soft: 22 52 37;
+    --bad: 245 110 110;
+    --bad-soft: 64 28 30;
+    --warn: 240 180 70;
+    --warn-soft: 60 45 18;
+    color-scheme: dark;
+  }
+  html { -webkit-text-size-adjust: 100%; }
+  body { @apply bg-bg text-ink font-sans antialiased; }
+  :focus-visible { @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-bg; }
+}
+
+@layer components {
+  .card { @apply rounded-2xl border border-line bg-surface shadow-card; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-primary { @apply btn bg-brand text-brand-ink hover:bg-brand/90; }
+  .btn-ghost { @apply btn border border-line bg-surface text-ink hover:bg-muted; }
+  .btn-danger { @apply btn bg-accent text-white hover:bg-accent/90; }
+  .chip { @apply inline-flex items-center gap-1 rounded-full border border-line bg-muted px-2.5 py-0.5 text-xs font-medium text-sub; }
+}
